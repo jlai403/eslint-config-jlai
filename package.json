@@ -1,0 +1,26 @@
+{
+  "name": "eslint-config-jlai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "export": "node export.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlai403/eslint-config-jlai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlai403/eslint-config-jlai/issues"
+  },
+  "homepage": "https://github.com/jlai403/eslint-config-jlai#readme",
+  "peerDependencies": {
+    "eslint": ">= 8"
+  },
+  "engines": {
+    "node": "12.x || 14.x || >= 16"
+  }
+}
