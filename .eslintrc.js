@@ -2,6 +2,9 @@ module.exports = {
   "env": {
 		"es2022": true
 	},
+  "plugins": [
+    "@typescript-eslint"
+  ],
 	"parserOptions": {
 		"sourceType": "module",
 		"ecmaVersion": 2022
