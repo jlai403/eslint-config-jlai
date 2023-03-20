@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/jlai403/eslint-config-jlai#readme",
   "peerDependencies": {
-    "eslint": ">= 8"
+    "eslint": ">= 8",
+    "@typescript-eslint/eslint-plugin": ">= 5"
   },
   "engines": {
     "node": "12.x || 14.x || >= 16"
