@@ -2,9 +2,6 @@ module.exports = {
 	"env": {
 		"es2022": true
 	},
-	"plugins": [
-		"@typescript-eslint"
-	],
 	"parserOptions": {
 		"sourceType": "module",
 		"ecmaVersion": 2022
@@ -20,7 +17,9 @@ module.exports = {
 			"project": ["./tsconfig.json"]
 		}
 	}],
-	"plugins": [],
+  "plugins": [
+		"@typescript-eslint"
+	],
 	"rules": {
 		// eslint:recommended from https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js
 		"constructor-super": "error",
