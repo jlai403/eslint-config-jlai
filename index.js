@@ -1,2 +1,1 @@
-import eslintrc from './.eslintrc.js';
-export default eslintrc;
+module.exports = require('./.eslintrc.js');
