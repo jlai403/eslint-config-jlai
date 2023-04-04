@@ -73,7 +73,7 @@ module.exports = {
 			'@typescript-eslint/ban-ts-comment': ['error', {'ts-expect-error': true, 'ts-ignore': true, 'ts-nocheck': true, 'ts-check': true, 'minimumDescriptionLength': 3}],
 			'@typescript-eslint/ban-tslint-comment': 'error',
 			'@typescript-eslint/ban-types': ['error', {'types': {}, 'extendDefaults': true}],
-			'@typescript-eslint/block-spacing': ['error', 'never'],
+			'@typescript-eslint/block-spacing': ['error', 'always'],
 			'@typescript-eslint/brace-style': ['error', '1tbs', {'allowSingleLine': true}],
 			'@typescript-eslint/class-literal-property-style': ['error', 'fields'],
 			'@typescript-eslint/comma-dangle': ['error', {'arrays': 'never', 'objects': 'never', 'imports': 'never', 'exports': 'never', 'functions': 'never', 'enums': 'never', 'generics': 'never', 'tuples': 'never'}],
