@@ -65,6 +65,7 @@ module.exports = {
 			'space-before-blocks': 'off', // NOTE: extended by @typescript-eslint/space-before-blocks
 			'space-before-function-paren': 'off', // NOTE: extended by @typescript-eslint/space-before-function-paren
 			'space-infix-ops': 'off', // NOTE: extended by @typescript-eslint/space-infix-ops
+			'no-console': 'error',
 
 			/* --- TYPESCRIPT (v5.55.0) --- */
 			'@typescript-eslint/adjacent-overload-signatures': 'error',
