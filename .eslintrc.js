@@ -180,7 +180,7 @@ module.exports = {
 			'@typescript-eslint/prefer-string-starts-ends-with': 'error',
 			'@typescript-eslint/prefer-ts-expect-error': 'error',
 			'@typescript-eslint/promise-function-async': ['error', {'allowAny': false, 'allowedPromiseNames': [], 'checkArrowFunctions': true, 'checkFunctionDeclarations': true, 'checkFunctionExpressions': true, 'checkMethodDeclarations': true}],
-			'@typescript-eslint/quotes': ['error', 'single', {'avoidEscape': false, 'allowTemplateLiterals': false}],
+			'@typescript-eslint/quotes': ['error', 'single', {'avoidEscape': true, 'allowTemplateLiterals': false}],
 			'@typescript-eslint/require-array-sort-compare': ['error', {'ignoreStringArrays': false}],
 			'@typescript-eslint/require-await': 'error',
 			'@typescript-eslint/restrict-plus-operands': ['error', {'checkCompoundAssignments': true, 'allowAny': false}],
