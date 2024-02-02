@@ -141,7 +141,7 @@ module.exports = {
 			'@typescript-eslint/no-shadow': ['error', {'builtinGlobals': true, 'hoist': 'all', 'allow': [], 'ignoreOnInitialization': false, 'ignoreTypeValueShadow': false, 'ignoreFunctionTypeParameterNameValueShadow': false}],
 			'@typescript-eslint/no-this-alias': ['error', {'allowDestructuring': true, 'allowedNames': []}],
 			'@typescript-eslint/no-throw-literal': ['error', {'allowThrowingAny': false, 'allowThrowingUnknown': false}],
-			'@typescript-eslint/no-type-alias': ['error', {'allowAliases': 'in-unions', 'allowCallbacks': 'never', 'allowConditionalTypes': 'always', 'allowConstructors': 'never', 'allowLiterals': 'never', 'allowMappedTypes': 'never', 'allowTupleTypes': 'always', 'allowGenerics': 'always'}],
+			'@typescript-eslint/no-type-alias': ['error', {'allowAliases': 'in-unions', 'allowCallbacks': 'never', 'allowConditionalTypes': 'always', 'allowConstructors': 'never', 'allowLiterals': 'never', 'allowMappedTypes': 'always', 'allowTupleTypes': 'always', 'allowGenerics': 'always'}],
 			'@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error', {'allowComparingNullableBooleansToTrue': false, 'allowComparingNullableBooleansToFalse': false}],
 			'@typescript-eslint/no-unnecessary-condition': ['error', {'allowConstantLoopConditions': false, 'allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing': false}],
 			'@typescript-eslint/no-unnecessary-qualifier': 'error',
