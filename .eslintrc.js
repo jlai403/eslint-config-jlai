@@ -39,7 +39,6 @@ module.exports = {
 			'lines-between-class-members': 'off', // NOTE: extended by @typescript-eslint/lines-between-class-members
 			'no-array-constructor': 'off', // NOTE: extended by @typescript-eslint/no-array-constructor
 			'no-dupe-class-members': 'off', // NOTE: extended by @typescript-eslint/no-dupe-class-members
-			'no-duplicate-imports': 'off', // NOTE: extended by @typescript-eslint/no-duplicate-imports
 			'no-empty-function': 'off', // NOTE: extended by @typescript-eslint/no-empty-function
 			'no-extra-parens': 'off', // NOTE: extended by @typescript-eslint/no-extra-parens
 			'no-extra-semi': 'off', // NOTE: extended by @typescript-eslint/no-extra-semi
@@ -67,7 +66,7 @@ module.exports = {
 			'space-infix-ops': 'off', // NOTE: extended by @typescript-eslint/space-infix-ops
 			'no-console': 'error',
 
-			/* --- TYPESCRIPT (v5.55.0) --- */
+			/* --- TYPESCRIPT (v7.0.2) --- */
 			'@typescript-eslint/adjacent-overload-signatures': 'error',
 			'@typescript-eslint/array-type': ['error', {'default': 'array', 'readonly': 'array'}],
 			'@typescript-eslint/await-thenable': 'error',
@@ -88,7 +87,7 @@ module.exports = {
 			'@typescript-eslint/default-param-last': 'error',
 			'@typescript-eslint/dot-notation': ['error', {'allowKeywords': true, 'allowPattern': '', 'allowPrivateClassPropertyAccess': false, 'allowProtectedClassPropertyAccess': false, 'allowIndexSignaturePropertyAccess': false}],
 			'@typescript-eslint/explicit-function-return-type': ['error', {'allowExpressions': true}],
-			'@typescript-eslint/explicit-member-accessibility': ['error', {'accessibility': 'implicit', 'overrides': {}, 'ignoredMethodNames': []}],
+			'@typescript-eslint/explicit-member-accessibility': ['error', {'accessibility': 'no-public', 'overrides': {}, 'ignoredMethodNames': []}],
 			'@typescript-eslint/explicit-module-boundary-types': ['error', {'allowArgumentsExplicitlyTypedAsAny': false, 'allowDirectConstAssertionInArrowFunctions': false, 'allowHigherOrderFunctions': false, 'allowTypedFunctionExpressions': false, 'allowedNames': []}],
 			'@typescript-eslint/func-call-spacing': ['error', 'never'],
 			'@typescript-eslint/indent': ['error', 'tab', {'SwitchCase': 1, 'VariableDeclarator': 1, 'outerIIFEBody': 1, 'MemberExpression': 1, 'FunctionDeclaration': {'parameters': 1, 'body': 1}, 'FunctionExpression': {'parameters': 1, 'body': 1}, 'StaticBlock': {'body': 1}, 'CallExpression': {'arguments': 1}, 'ArrayExpression': 1, 'ObjectExpression': 1, 'ImportDeclaration': 1, 'flatTernaryExpressions': false, 'offsetTernaryExpressions': false, 'ignoredNodes': [], 'ignoreComments': false}], //NOTE: broken
@@ -107,7 +106,6 @@ module.exports = {
 			'@typescript-eslint/no-confusing-void-expression': ['error', {'ignoreArrowShorthand': true, 'ignoreVoidOperator': false}],
 			'@typescript-eslint/no-dupe-class-members': 'error',
 			'@typescript-eslint/no-duplicate-enum-values': 'error',
-			'@typescript-eslint/no-duplicate-imports': ['error', {'includeExports': true}],
 			'@typescript-eslint/no-dynamic-delete': 'error',
 			'@typescript-eslint/no-empty-function': ['error', {'allow': ['overrideMethods']}],
 			'@typescript-eslint/no-empty-interface': ['error', {'allowSingleExtends': false}],
@@ -183,7 +181,7 @@ module.exports = {
 			'@typescript-eslint/quotes': ['error', 'single', {'avoidEscape': true, 'allowTemplateLiterals': false}],
 			'@typescript-eslint/require-array-sort-compare': ['error', {'ignoreStringArrays': false}],
 			'@typescript-eslint/require-await': 'error',
-			'@typescript-eslint/restrict-plus-operands': ['error', {'checkCompoundAssignments': true, 'allowAny': false}],
+			'@typescript-eslint/restrict-plus-operands': ['error', {'skipCompoundAssignments': false, 'allowAny': false}],
 			'@typescript-eslint/restrict-template-expressions': ['error', {'allowNumber': true, 'allowBoolean': false, 'allowAny': false, 'allowNullish': false, 'allowRegExp': false}],
 			'@typescript-eslint/return-await': ['error', 'never'],
 			'@typescript-eslint/semi': ['error', 'always', {'omitLastInOneLineBlock': false}],
@@ -206,5 +204,5 @@ module.exports = {
 			'@typescript-eslint/no-invalid-this': 'off',
 			'@typescript-eslint/no-magic-numbers': 'off'
 		}
-	}],
+	}]
 }
