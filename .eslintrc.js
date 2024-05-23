@@ -17,7 +17,7 @@ module.exports = {
 	},
 	'overrides': [{
 		// Typescript override
-		'files': ['*.ts'],
+		'files': ['*.ts', '*.mts'],
 		'parser': '@typescript-eslint/parser',
 		'parserOptions': {
 			'project': ['./tsconfig.json']
@@ -198,7 +198,7 @@ module.exports = {
 		}
 	}, {
 		// Test override
-		'files': ['**/*.spec.ts'],
+		'files': ['**/*.spec.ts', '**/*.spec.mts'],
 		'rules': {
 			'@typescript-eslint/no-invalid-this': 'off',
 			'@typescript-eslint/no-magic-numbers': 'off'
