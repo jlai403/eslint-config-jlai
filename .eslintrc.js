@@ -152,7 +152,7 @@ module.exports = {
 			'@typescript-eslint/no-unsafe-member-access': 'error',
 			'@typescript-eslint/no-unsafe-return': 'error',
 			'@typescript-eslint/no-unused-expressions': ['error', {'allowShortCircuit': false, 'allowTernary': false, 'allowTaggedTemplates': false, 'enforceForJSX': true}],
-			'@typescript-eslint/no-unused-vars': ['error', {'vars': 'all', 'varsIgnorePattern': '^_', 'args': 'none', 'ignoreRestSiblings': false, 'argsIgnorePattern': '^_', 'caughtErrors': 'all', 'caughtErrorsIgnorePattern': '', 'destructuredArrayIgnorePattern': ''}],
+			'@typescript-eslint/no-unused-vars': ['error', {'vars': 'all', 'varsIgnorePattern': '^_', 'args': 'all', 'ignoreRestSiblings': true, 'argsIgnorePattern': '^_', 'caughtErrors': 'all', 'caughtErrorsIgnorePattern': '^_', 'destructuredArrayIgnorePattern': '^_'}],
 			'@typescript-eslint/no-use-before-define': ['error', {'functions': true, 'classes': true, 'enums': true, 'variables': true, 'typedefs': false, 'ignoreTypeReferences': false, 'allowNamedExports': false}],
 			'@typescript-eslint/no-useless-constructor': 'error',
 			'@typescript-eslint/no-useless-empty-export': 'error',
