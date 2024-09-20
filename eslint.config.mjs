@@ -8,7 +8,7 @@ export default [
     {
         plugins: {
             "@typescript-eslint": typescriptEslint,
-            "@stylistic/js": stylistic
+            "@stylistic": stylistic
         },
         languageOptions: {
             globals: {},
