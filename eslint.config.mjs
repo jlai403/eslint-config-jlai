@@ -1,12 +1,14 @@
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import js from "@eslint/js";
+import stylisticJs from "@stylistic/eslint-plugin-js";
 
 export default [
     js.configs.recommended,
     {
         plugins: {
             "@typescript-eslint": typescriptEslint,
+            "@stylistic/js": stylisticJs
         },
         languageOptions: {
             globals: {},
@@ -75,8 +77,9 @@ export default [
             "@typescript-eslint/await-thenable": "error",
             "@typescript-eslint/ban-ts-comment": ["error", {"ts-expect-error": true, "ts-ignore": true, "ts-nocheck": true, "ts-check": true, "minimumDescriptionLength": 3}],
             "@typescript-eslint/ban-tslint-comment": "error",
-            "@typescript-eslint/ban-types": ["error", {"types": {}, "extendDefaults": true}],
-            "@typescript-eslint/block-spacing": ["error", "always"],
+            // "@typescript-eslint/ban-types": ["error", {"types": {}, "extendDefaults": true}],
+            // "@typescript-eslint/block-spacing": ["error", "always"],
+            "@stylistic/js/indent": ["error", 2],
             "@typescript-eslint/brace-style": ["error", "1tbs", {"allowSingleLine": true}],
             "@typescript-eslint/class-literal-property-style": ["error", "fields"],
             "@typescript-eslint/comma-dangle": ["error", {"arrays": "never", "objects": "never", "imports": "never", "exports": "never", "functions": "never", "enums": "never", "generics": "never", "tuples": "never"}],
