@@ -1,14 +1,14 @@
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import js from "@eslint/js";
-import stylisticJs from "@stylistic/eslint-plugin-js";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default [
     js.configs.recommended,
     {
         plugins: {
             "@typescript-eslint": typescriptEslint,
-            "@stylistic/js": stylisticJs
+            "@stylistic/js": stylistic
         },
         languageOptions: {
             globals: {},
@@ -71,19 +71,31 @@ export default [
             "space-infix-ops": "off", // NOTE: extended by @typescript-eslint/space-infix-ops
             "no-console": "error",
 
+            "@stylistic/indent": ["error", 2],
+            "@stylistic/brace-style": ["error", "1tbs", {"allowSingleLine": true}],
+            "@stylistic/comma-dangle": ["error", "never"],
+            "@stylistic/comma-spacing": ["error", {"before": false, "after": true}],
+            "@stylistic/func-call-spacing": ["error", "never"],
+            "@stylistic/indent": ["error", "tab", {"SwitchCase": 1, "VariableDeclarator": 1, "outerIIFEBody": 1, "MemberExpression": 1, "FunctionDeclaration": {"parameters": 1, "body": 1}, "FunctionExpression": {"parameters": 1, "body": 1}, "StaticBlock": {"body": 1}, "CallExpression": {"arguments": 1}, "ArrayExpression": 1, "ObjectExpression": 1, "ImportDeclaration": 1, "flatTernaryExpressions": false, "offsetTernaryExpressions": false, "ignoredNodes": [], "ignoreComments": false}], //NOTE: broken
+            "@stylistic/key-spacing": ["error", {"beforeColon": false, "afterColon": true, "mode": "strict"}], //NOTE: too aggressive; false positives on interfaces
+            "@stylistic/keyword-spacing": ["error", {"before": true, "after": true}],
+            "@stylistic/member-delimiter-style": ["error", {"multiline": {"delimiter": "semi", "requireLast": true}, "singleline": {"delimiter": "semi", "requireLast": true}, "overrides": {"interface": {}, "typeLiteral": {}}, "multilineDetection": "brackets"}],
+            "@stylistic/no-extra-parens": ["error", "all", {"conditionalAssign": true, "nestedBinaryExpressions": false, "returnAssign": true, "ignoreJSX": "none", "enforceForArrowConditionals": true, "enforceForSequenceExpressions": true, "enforceForNewInMemberExpressions": true, "enforceForFunctionPrototypeMethods": true, "allowParensAfterCommentPattern": ""}],
+            "@stylistic/no-extra-semi": "error",
+            "@stylistic/quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": false}],
+            "@stylistic/semi": ["error", "always", {"omitLastInOneLineBlock": false}],
+            "@stylistic/space-before-blocks": ["error", {"keywords": "always", "functions": "always", "classes": "always"}],
+            "@stylistic/space-before-function-paren": ["error", {"anonymous": "never", "named": "never", "asyncArrow": "always"}],
+            "@stylistic/space-infix-ops": "off",
+            "@stylistic/type-annotation-spacing": ["error"],
+
             /* --- TYPESCRIPT (v7.0.2) --- */
             "@typescript-eslint/adjacent-overload-signatures": "error",
             "@typescript-eslint/array-type": ["error", {"default": "array", "readonly": "array"}],
             "@typescript-eslint/await-thenable": "error",
             "@typescript-eslint/ban-ts-comment": ["error", {"ts-expect-error": true, "ts-ignore": true, "ts-nocheck": true, "ts-check": true, "minimumDescriptionLength": 3}],
             "@typescript-eslint/ban-tslint-comment": "error",
-            // "@typescript-eslint/ban-types": ["error", {"types": {}, "extendDefaults": true}],
-            // "@typescript-eslint/block-spacing": ["error", "always"],
-            "@stylistic/js/indent": ["error", 2],
-            "@typescript-eslint/brace-style": ["error", "1tbs", {"allowSingleLine": true}],
             "@typescript-eslint/class-literal-property-style": ["error", "fields"],
-            "@typescript-eslint/comma-dangle": ["error", {"arrays": "never", "objects": "never", "imports": "never", "exports": "never", "functions": "never", "enums": "never", "generics": "never", "tuples": "never"}],
-            "@typescript-eslint/comma-spacing": ["error", {"before": false, "after": true}],
             "@typescript-eslint/consistent-generic-constructors": ["error", "constructor"],
             "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
             "@typescript-eslint/consistent-type-assertions": ["error", { "assertionStyle": "as", "objectLiteralTypeAssertions": "allow-as-parameter" }],
@@ -95,14 +107,9 @@ export default [
             "@typescript-eslint/explicit-function-return-type": ["error", {"allowExpressions": true}],
             "@typescript-eslint/explicit-member-accessibility": ["error", {"accessibility": "no-public", "overrides": {}, "ignoredMethodNames": []}],
             "@typescript-eslint/explicit-module-boundary-types": ["error", {"allowArgumentsExplicitlyTypedAsAny": false, "allowDirectConstAssertionInArrowFunctions": false, "allowHigherOrderFunctions": false, "allowTypedFunctionExpressions": false, "allowedNames": []}],
-            "@typescript-eslint/func-call-spacing": ["error", "never"],
-            "@typescript-eslint/indent": ["error", "tab", {"SwitchCase": 1, "VariableDeclarator": 1, "outerIIFEBody": 1, "MemberExpression": 1, "FunctionDeclaration": {"parameters": 1, "body": 1}, "FunctionExpression": {"parameters": 1, "body": 1}, "StaticBlock": {"body": 1}, "CallExpression": {"arguments": 1}, "ArrayExpression": 1, "ObjectExpression": 1, "ImportDeclaration": 1, "flatTernaryExpressions": false, "offsetTernaryExpressions": false, "ignoredNodes": [], "ignoreComments": false}], //NOTE: broken
             "@typescript-eslint/init-declarations": ["error", "always"],
-            "@typescript-eslint/key-spacing": ["error", {"beforeColon": false, "afterColon": true, "mode": "strict"}], //NOTE: too aggressive; false positives on interfaces
-            "@typescript-eslint/keyword-spacing": ["error", {"before": true, "after": true}],
             "@typescript-eslint/lines-around-comment": "off",
             "@typescript-eslint/lines-between-class-members": "off",
-            "@typescript-eslint/member-delimiter-style": ["error", {"multiline": {"delimiter": "semi", "requireLast": true}, "singleline": {"delimiter": "semi", "requireLast": true}, "overrides": {"interface": {}, "typeLiteral": {}}, "multilineDetection": "brackets"}],
             "@typescript-eslint/member-ordering": "off",
             "@typescript-eslint/method-signature-style": ["error", "property"],
             "@typescript-eslint/naming-convention": "off",
@@ -117,8 +124,6 @@ export default [
             "@typescript-eslint/no-empty-interface": ["error", {"allowSingleExtends": false}],
             "@typescript-eslint/no-explicit-any": ["error", {"fixToUnknown": false, "ignoreRestArgs": false}],
             "@typescript-eslint/no-extra-non-null-assertion": "error",
-            "@typescript-eslint/no-extra-parens": ["error", "all", {"conditionalAssign": true, "nestedBinaryExpressions": false, "returnAssign": true, "ignoreJSX": "none", "enforceForArrowConditionals": true, "enforceForSequenceExpressions": true, "enforceForNewInMemberExpressions": true, "enforceForFunctionPrototypeMethods": true, "allowParensAfterCommentPattern": ""}],
-            "@typescript-eslint/no-extra-semi": "error",
             "@typescript-eslint/no-extraneous-class": ["error", {"allowConstructorOnly": false, "allowEmpty": false, "allowStaticOnly": false, "allowWithDecorator": false}],
             "@typescript-eslint/no-floating-promises": ["error", {"ignoreVoid": true, "ignoreIIFE": false}],
             "@typescript-eslint/no-for-in-array": "error",
@@ -144,7 +149,7 @@ export default [
             "@typescript-eslint/no-restricted-imports": "off",
             "@typescript-eslint/no-shadow": ["error", {"builtinGlobals": true, "hoist": "all", "allow": [], "ignoreOnInitialization": false, "ignoreTypeValueShadow": false, "ignoreFunctionTypeParameterNameValueShadow": false}],
             "@typescript-eslint/no-this-alias": ["error", {"allowDestructuring": true, "allowedNames": []}],
-            "@typescript-eslint/no-throw-literal": ["error", {"allowThrowingAny": false, "allowThrowingUnknown": false}],
+            // "@typescript-eslint/no-throw-literal": ["error", {"allowThrowingAny": false, "allowThrowingUnknown": false}],
             "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["error", {"allowComparingNullableBooleansToTrue": false, "allowComparingNullableBooleansToFalse": false}],
             "@typescript-eslint/no-unnecessary-condition": ["error", {"allowConstantLoopConditions": false, "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false}],
             "@typescript-eslint/no-unnecessary-qualifier": "error",
@@ -183,21 +188,15 @@ export default [
             "@typescript-eslint/prefer-string-starts-ends-with": "error",
             "@typescript-eslint/prefer-ts-expect-error": "error",
             "@typescript-eslint/promise-function-async": ["error", {"allowAny": false, "allowedPromiseNames": [], "checkArrowFunctions": true, "checkFunctionDeclarations": true, "checkFunctionExpressions": true, "checkMethodDeclarations": true}],
-            "@typescript-eslint/quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": false}],
             "@typescript-eslint/require-array-sort-compare": ["error", {"ignoreStringArrays": false}],
             "@typescript-eslint/require-await": "error",
             "@typescript-eslint/restrict-plus-operands": ["error", {"skipCompoundAssignments": false, "allowAny": false}],
             "@typescript-eslint/restrict-template-expressions": ["error", {"allowNumber": true, "allowBoolean": false, "allowAny": false, "allowNullish": false, "allowRegExp": false}],
             "@typescript-eslint/return-await": ["error", "never"],
-            "@typescript-eslint/semi": ["error", "always", {"omitLastInOneLineBlock": false}],
             "@typescript-eslint/sort-type-constituents": "off",
-            "@typescript-eslint/space-before-blocks": ["error", {"keywords": "always", "functions": "always", "classes": "always"}],
-            "@typescript-eslint/space-before-function-paren": ["error", {"anonymous": "never", "named": "never", "asyncArrow": "always"}],
-            "@typescript-eslint/space-infix-ops": "off",
             "@typescript-eslint/strict-boolean-expressions": ["error", {"allowString": false, "allowNumber": true, "allowNullableObject": true, "allowNullableBoolean": false, "allowNullableString": false, "allowNullableNumber": false, "allowNullableEnum": false, "allowAny": false, "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false}],
             "@typescript-eslint/switch-exhaustiveness-check": "error",
             "@typescript-eslint/triple-slash-reference": ["error", {"lib": "always", "path": "never", "types": "prefer-import"}],
-            "@typescript-eslint/type-annotation-spacing": ["error"],
             "@typescript-eslint/typedef": "off",
             "@typescript-eslint/unbound-method": ["error", {"ignoreStatic": false}],
             "@typescript-eslint/unified-signatures": ["error", {"ignoreDifferentlyNamedParameters": false}]
