@@ -137,7 +137,7 @@ export default [
             "@typescript-eslint/no-magic-numbers": ["error", {"detectObjects": true, "enforceConst": true, "ignore": [-1, 0, 1, 2], "ignoreArrayIndexes": false, "ignoreDefaultValues": false, "ignoreClassFieldInitialValues": false, "ignoreNumericLiteralTypes": false, "ignoreEnums": false, "ignoreReadonlyClassProperties": false, "ignoreTypeIndexes": false}],
             "@typescript-eslint/no-meaningless-void-operator": ["error", {"checkNever": false}],
             "@typescript-eslint/no-misused-new": "error",
-            "@typescript-eslint/no-misused-promises": ["error", {"checksConditionals": true, "checksVoidReturn": true, "checksSpreads": true}],
+            "@typescript-eslint/no-misused-promises": ["error", {"checksConditionals": true, "checksVoidReturn": false, "checksSpreads": true}],
             "@typescript-eslint/no-mixed-enums": "error",
             "@typescript-eslint/no-namespace": ["error", {"allowDeclarations": false, "allowDefinitionFiles": false}],
             "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
