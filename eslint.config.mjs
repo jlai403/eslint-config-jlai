@@ -35,7 +35,6 @@ export default [
             "comma-spacing": "off", // NOTE: extended by @typescript-eslint/comma-spacing
             "default-param-last": "off", // NOTE: extended by @typescript-eslint/default-param-last
             "dot-notation": "off", // NOTE: extended by @typescript-eslint/dot-notation
-            "func-call-spacing": "off", // NOTE: extended by @typescript-eslint/func-call-spacing
             "indent": "off", // NOTE: extended by @typescript-eslint/indent
             "init-declarations": "off", // NOTE: extended by @typescript-eslint/init-declarations
             "key-spacing": "off", // NOTE: extended by @typescript-eslint/key-spacing
@@ -75,7 +74,7 @@ export default [
             "@stylistic/brace-style": ["error", "1tbs", {"allowSingleLine": true}],
             "@stylistic/comma-dangle": ["error", "never"],
             "@stylistic/comma-spacing": ["error", {"before": false, "after": true}],
-            "@stylistic/func-call-spacing": ["error", "never"],
+            "@stylistic/function-call-spacing": ["error", "never"],
             "@stylistic/indent": ["error", "tab", {"SwitchCase": 1, "VariableDeclarator": 1, "outerIIFEBody": 1, "MemberExpression": 1, "FunctionDeclaration": {"parameters": 1, "body": 1}, "FunctionExpression": {"parameters": 1, "body": 1}, "StaticBlock": {"body": 1}, "CallExpression": {"arguments": 1}, "ArrayExpression": 1, "ObjectExpression": 1, "ImportDeclaration": 1, "flatTernaryExpressions": false, "offsetTernaryExpressions": false, "ignoredNodes": [], "ignoreComments": false}], //NOTE: broken
             "@stylistic/key-spacing": ["error", {"beforeColon": false, "afterColon": true, "mode": "strict"}], //NOTE: too aggressive; false positives on interfaces
             "@stylistic/keyword-spacing": ["error", {"before": true, "after": true}],
