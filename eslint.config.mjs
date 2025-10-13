@@ -78,9 +78,9 @@ export default [
             "@stylistic/key-spacing": ["error", {"beforeColon": false, "afterColon": true, "mode": "strict"}], //NOTE: too aggressive; false positives on interfaces
             "@stylistic/keyword-spacing": ["error", {"before": true, "after": true}],
             "@stylistic/member-delimiter-style": ["error", {"multiline": {"delimiter": "semi", "requireLast": true}, "singleline": {"delimiter": "semi", "requireLast": true}, "overrides": {"interface": {}, "typeLiteral": {}}, "multilineDetection": "brackets"}],
-            "@stylistic/no-extra-parens": ["error", "all", {"conditionalAssign": true, "nestedBinaryExpressions": false, "returnAssign": true, "ignoreJSX": "none", "enforceForArrowConditionals": true, "enforceForSequenceExpressions": true, "enforceForNewInMemberExpressions": true, "enforceForFunctionPrototypeMethods": true, "allowParensAfterCommentPattern": ""}],
+            "@stylistic/no-extra-parens": ["error", "all", {"conditionalAssign": true, "nestedBinaryExpressions": false, "returnAssign": true, "ignoreJSX": "none", "enforceForSequenceExpressions": true, "enforceForFunctionPrototypeMethods": true, "allowParensAfterCommentPattern": ""}],
             "@stylistic/no-extra-semi": "error",
-            "@stylistic/quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": false}],
+            "@stylistic/quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": "always"}],
             "@stylistic/semi": ["error", "always", {"omitLastInOneLineBlock": false}],
             "@stylistic/space-before-blocks": ["error", {"keywords": "always", "functions": "always", "classes": "always"}],
             "@stylistic/space-before-function-paren": ["error", {"anonymous": "never", "named": "never", "asyncArrow": "always"}],
