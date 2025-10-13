@@ -70,7 +70,6 @@ export default [
             "space-infix-ops": "off", // NOTE: extended by @typescript-eslint/space-infix-ops
             "no-console": "error",
 
-            "@stylistic/indent": ["error", 2],
             "@stylistic/brace-style": ["error", "1tbs", {"allowSingleLine": true}],
             "@stylistic/comma-dangle": ["error", "never"],
             "@stylistic/comma-spacing": ["error", {"before": false, "after": true}],

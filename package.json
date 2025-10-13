@@ -16,6 +16,13 @@
     "url": "https://github.com/jlai403/eslint-config-jlai/issues"
   },
   "homepage": "https://github.com/jlai403/eslint-config-jlai#readme",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.10.0",
+    "@stylistic/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0"
+  },
   "peerDependencies": {
     "eslint": ">= 9",
     "@typescript-eslint/eslint-plugin": ">= 8",
